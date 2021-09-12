@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <div class="g-topbar">
+        <!-- 头部导航栏 -->
+        <div class="m-top">
+            <div class="top-wrap">
+                <!-- logo区域 -->
+                <h1 class="logo">
+                    <a href="javascript:;">网易云音乐</a>
+                </h1>
+                <!-- 导航栏 -->
+                <ul class="m-nav">
+                    <li class="frist-nav"><a href="javascript:;">发现音乐</a></li>
+                    <li><a href="javascript:;">我的音乐</a></li>
+                    <li><a href="javascript:;">朋友</a></li>
+                    <li><a href="javascript:;">商城</a></li>
+                    <li><a href="javascript:;">音乐人</a></li>
+                    <li><a href="javascript:;">下载客户端</a></li>
+                </ul>
+                <!-- 搜索框区域 -->
+                <div class="m-search">
+                    <input type="search" name="search" class="input-search" placeholder="音乐/视频/电台/用户">
+                </div>
+                <!-- 创作者中心 -->
+                <a href="javascript:;" class="m-creation">创作者中心</a>
+                <!-- 登录 -->
+                <a href="javascript:;" class="btn-login">登录</a>
+            </div>
+        </div>
+        <!-- 子导航栏 -->
+        <div class="m-subnav">
+            <div class="n-wrap">
+                <ul class="nav">
+                    <li><a href="javascript:;" class="z-list"><em class="first-em">推荐</em></a></li>
+                    <li><a href="javascript:;" class="z-list"><em>排行榜</em></a></li>
+                    <li><a href="javascript:;" class="z-list"><em>歌单</em></a></li>
+                    <li><a href="javascript:;" class="z-list"><em>主播电台</em></a></li>
+                    <li><a href="javascript:;" class="z-list"><em>歌手</em></a></li>
+                    <li><a href="javascript:;" class="z-list"><em>新碟电台</em></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="g-main">
+        <!-- 嵌套页面ifarm -->
+        <iframe src="main.html" class="g-ifarm" frameborder="0" width="100%"></iframe>
+    </div>
+    <!-- 底部导航栏 -->
+    <div class="g-ft">
+        <!-- <div class="m-ft">版权展示</div> -->
+        <div class="m-btmbar">固定导航栏</div>
+    </div>
+    <script>
+        var iframes = document.getElementsByTagName('iframe');
+
+        for (var i = 0, j = iframes.length; i < j; ++i) {
+            // 放在闭包中，防止iframe触发load事件的时候下标不匹配
+            (function(_i) {
+                iframes[_i].onload = function() {
+                    this.contentWindow.onbeforeunload = function() {
+                        iframes[_i].setAttribute('height', 'auto');
+                    };
+
+                    this.setAttribute('height', this.contentWindow.document.body.scrollHeight);
+                };
+            })(i);
+        }
+    </script>
+</body>
+
+</html>
