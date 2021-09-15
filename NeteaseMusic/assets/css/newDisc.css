@@ -1,0 +1,75 @@
+.m-cvrlst {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.m-cvrlst li {
+    width: 150px;
+    height: 170px;
+    margin-left: 35px;
+    margin-bottom: 35px;
+}
+
+.m-cvrlst li:nth-child(5n-4) {
+    margin-left: 0;
+}
+
+.d-cover {
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+
+.msk {
+    position: absolute;
+    right: -21;
+    top: 5px;
+    display: inline-block;
+    width: 21px;
+    height: 121px;
+    background: url(../images/coverall.png)no-repeat -129px -850px;
+}
+
+.f-thide a {
+    font-size: 13px;
+    font-weight: 5000;
+}
+
+.f-thide .s-fs3 {
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+}
+
+
+/* 分类导航栏 */
+
+.tab {
+    position: relative;
+    right: -120px;
+    top: -30px
+}
+
+.s-fs {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 34px;
+    font-size: 12px;
+    color: rgb(102, 102, 144);
+    /* background: pink; */
+}
+
+.s-fs::after {
+    position: absolute;
+    content: '|';
+    right: -4px;
+}
+
+.s-fs:last-child::after {
+    content: '';
+}
+
+.s-fs:hover {
+    text-decoration: underline;
+}

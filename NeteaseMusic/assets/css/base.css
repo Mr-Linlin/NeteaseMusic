@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* background: rgb(242, 242, 242); */
+    font-size: 14px;
 }
 
 a {

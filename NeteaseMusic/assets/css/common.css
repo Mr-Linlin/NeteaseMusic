@@ -1,0 +1,448 @@
+body {
+    display: flex;
+    justify-content: center;
+    background: rgb(245, 245, 245);
+}
+
+.g-bd {
+    width: 980px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background: #fff;
+    /* margin-bottom: 40px; */
+}
+
+.g-wrap {
+    margin: 40px;
+}
+
+.n-hot {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 41px;
+    border-bottom: 2px solid rgb(194, 17, 16);
+}
+
+.rmd-title {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 5px;
+    height: 41px;
+}
+
+.btn-menu {
+    display: inline-block;
+    position: absolute;
+    width: 91px;
+    height: 35px;
+    left: 60px;
+    bottom: 10px;
+    background: url(../images/button2.png)no-repeat 0 -1809px;
+    font-size: 12px;
+    color: rgb(12, 115, 207);
+    line-height: 34px;
+    text-align: center;
+}
+
+.btn-menu::after {
+    display: inline-block;
+    content: '';
+    width: 9px;
+    height: 5px;
+    background: url(../images/icon.png) no-repeat -70px -543px;
+    margin-left: 5px;
+}
+
+.btn-menu span {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 1px;
+    width: 10px;
+    height: 34px;
+    background: url(../images/button2.png)no-repeat -240px -1850px;
+}
+
+.more {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 31px;
+    background: url(../images/button2.png)no-repeat 0 -2855px;
+    color: #fff;
+    line-height: 31px;
+    text-align: center;
+}
+
+.more::after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 5px;
+    height: 31px;
+    background: url(../images/button2.png)no-repeat -245px -2894px;
+}
+
+.more:hover {
+    text-decoration: underline;
+}
+
+
+/* 分页功能 */
+
+.m-pl-pager {
+    text-align: center;
+    /* background: pink; */
+    height: 26px;
+}
+
+.u-page .btn {
+    display: inline-block;
+    width: 63px;
+    height: 26px;
+    background-image: url(../images/index.png);
+    background-repeat: no-repeat;
+    background-position-y: -130px;
+    line-height: 26px;
+    border: 0;
+}
+
+.u-page a {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.u-page .prv-page {
+    color: rgb(202, 202, 202);
+}
+
+.frist-btn {
+    background: rgb(194, 17, 16);
+    color: #fff;
+}
+
+
+/* 按钮模块 */
+
+.btns a {
+    display: inline-block;
+    line-height: 31px;
+    text-align: center;
+    height: 31px;
+    color: rgb(102, 102, 102);
+    margin-right: 6px;
+}
+
+.btns a:first-child {
+    margin-right: 0;
+}
+
+.u-btn-applay {
+    position: relative;
+    width: 66px;
+    background: url(../images/button2.png) no-repeat 0 -1650px;
+}
+
+.u-btn-applay>span {
+    margin-left: 20px;
+    color: #fff;
+}
+
+.u-btn-applay span::before {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    top: 6px;
+    left: 6px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/button2.png)no-repeat 0 -1621px;
+}
+
+.u-btn-add {
+    width: 33px;
+    height: 32px;
+    color: #fff;
+    background: url(../images/button2.png)no-repeat 0 -1588px;
+}
+
+.u-btn-add:hover {
+    background: url(../images/button2.png)no-repeat -40px -1588px;
+}
+
+.u-btn-fav {
+    position: relative;
+    width: 62px;
+    background: url(../images/button2.png)no-repeat 0 -977px;
+    /* border-right: 1px solid rgb(102, 102, 102); */
+}
+
+.u-btn-fav::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 32px;
+    background: url(../images/button2.png)no-repeat -244px -1020px;
+}
+
+.u-btn-fav:hover {
+    background: url(../images/button2.png)no-repeat 0 -1063px;
+}
+
+.u-btn-fav>span {
+    margin-left: 20px;
+}
+
+.u-btn-share {
+    position: relative;
+    width: 62px;
+    background: url(../images/button2.png)no-repeat 0 -1225px;
+    /* border-right: 1px solid rgb(102, 102, 102); */
+}
+
+.u-btn-share::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 32px;
+    background: url(../images/button2.png)no-repeat -244px -1020px;
+}
+
+.u-btn-share:hover {
+    background: url(../images/button2.png)no-repeat 0 -1268px;
+}
+
+.u-btn-share>span {
+    margin-left: 20px;
+}
+
+
+/* 下载按钮 */
+
+.u-btn-dl {
+    position: relative;
+    width: 62px;
+    background: url(../images/button2.png)no-repeat 0 -2761px;
+    /* border-right: 1px solid rgb(102, 102, 102); */
+}
+
+.u-btn-dl::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 32px;
+    background: url(../images/button2.png)no-repeat -244px -1020px;
+}
+
+.u-btn-dl:hover {
+    background: url(../images/button2.png)no-repeat 0 -2805px;
+}
+
+.u-btn-dl>span {
+    margin-left: 20px;
+}
+
+
+/* 评论 */
+
+.u-btn-commt {
+    position: relative;
+    width: 79px;
+    background: url(../images/button2.png)no-repeat 0 -1465px;
+    /* border-right: 1px solid rgb(102, 102, 102); */
+}
+
+.u-btn-commt::after {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    content: '';
+    width: 6px;
+    height: 32px;
+    background: url(../images/button2.png)no-repeat -244px -1020px;
+}
+
+.u-btn-commt:hover {
+    background: url(../images/button2.png)no-repeat 0 -1508px;
+}
+
+.u-btn-commt>span {
+    margin-left: 23px;
+}
+
+.lyric-content {
+    margin-top: 40px;
+    height: 218px;
+    overflow: hidden;
+}
+
+.m-lyric-con {
+    position: relative;
+}
+
+.unfold {
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    color: rgb(12, 115, 194);
+    font-size: 12px;
+}
+
+.unfold:hover {
+    text-decoration: underline;
+}
+
+.unfold::after {
+    display: inline-block;
+    content: '';
+    width: 13px;
+    height: 9px;
+    background: url(../images/icon.png) no-repeat 0 -684px;
+}
+
+
+/* 评论模块 */
+
+.n-commt {
+    width: 709px;
+    /* margin-top: 40px; */
+}
+
+.iptarea {
+    display: flex;
+    margin-top: 20px;
+    /* height: 50px; */
+    width: 100%;
+    /* background: red; */
+}
+
+.u-txtwrap {
+    flex: 1;
+}
+
+.u-txtwrap input {
+    height: 68px;
+    width: 97%;
+    outline: none;
+    padding-left: 15px;
+}
+
+.head {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.u-title {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    border-bottom: 3px solid rgb(194, 12, 12);
+    padding-bottom: 5px;
+}
+
+.u-title h3 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.u-title span {
+    color: rgb(102, 102, 154);
+    font-size: 12px;
+    line-height: 35px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.u-hd2 {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.itm {
+    display: flex;
+    width: 100%;
+    height: 82px;
+    border-bottom: 1px solid #ccc;
+}
+
+.itm .head {
+    margin-top: 15px;
+}
+
+.cntwrap {
+    flex: 1;
+    margin-top: 15px;
+    height: 50px;
+}
+
+.cnt {
+    height: 20px;
+    width: 100%;
+    margin: 0;
+}
+
+.cnt .s-fc1 {
+    color: rgb(12, 115, 194);
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+.cnt .s-fc:hover {
+    text-decoration: underline;
+}
+
+.rb {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 11px;
+}
+
+.rb .time {
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+}
+
+.rb>a {
+    position: relative;
+    font-size: 12px;
+    right: 30px;
+}
+
+.rb>a i {
+    position: absolute;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/icon.png) no-repeat -36px -679px;
+    top: 2px;
+    left: -11px;
+}
+
+.rb .s-fc3 {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+}

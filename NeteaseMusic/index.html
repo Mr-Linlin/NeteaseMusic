@@ -43,12 +43,12 @@
         <div class="m-subnav">
             <div class="n-wrap">
                 <ul class="nav">
-                    <li><a href="javascript:;" class="z-list"><em class="first-em">推荐</em></a></li>
-                    <li><a href="javascript:;" class="z-list"><em>排行榜</em></a></li>
-                    <li><a href="javascript:;" class="z-list"><em>歌单</em></a></li>
-                    <li><a href="javascript:;" class="z-list"><em>主播电台</em></a></li>
-                    <li><a href="javascript:;" class="z-list"><em>歌手</em></a></li>
-                    <li><a href="javascript:;" class="z-list"><em>新碟电台</em></a></li>
+                    <li><a href="main.html" target="fm" class="z-list"><em class="first-em">推荐</em></a></li>
+                    <li><a href="mList.html" target="fm" class="z-list"><em>排行榜</em></a></li>
+                    <li><a href="playList.html" target="fm" class="z-list"><em>歌单</em></a></li>
+                    <li><a href="main.html" target="fm" class="z-list"><em>主播电台</em></a></li>
+                    <li><a href="main.html" target="fm" class="z-list"><em>歌手</em></a></li>
+                    <li><a href="newDisc.html" target="fm" class="z-list"><em>新碟上架</em></a></li>
                 </ul>
             </div>
         </div>
@@ -56,13 +56,57 @@
     <!-- 主体内容 -->
     <div class="g-main">
         <!-- 嵌套页面ifarm -->
-        <iframe src="main.html" class="g-ifarm" frameborder="0" width="100%"></iframe>
+        <iframe src="main.html" class="g-ifarm" frameborder="0" width="100%" name="fm"></iframe>
     </div>
     <!-- 底部导航栏 -->
     <div class="g-ft">
-        <!-- <div class="m-ft">版权展示</div> -->
-        <div class="m-btmbar">固定导航栏</div>
+        <div class="m-ft"></div>
+
     </div>
+    <!-- 固定导航栏 -->
+    <div class="m-btmbar">
+        <div class="wrap">
+            <!-- 播放暂停 -->
+            <div class="btns">
+                <a href="javascript:;" class="prv"></a>
+                <a href="javascript:;" class="ply"></a>
+                <a href="javascript:;" class="nxt"></a>
+            </div>
+            <!-- 歌曲封面 -->
+            <div class="head">
+                <a href="javascript:;" class="msk">
+                    <img src="assets/images/m2.png" alt="">
+                </a>
+            </div>
+            <!-- 播放进度条 -->
+            <div class="play">
+                <div class="p-wrap">
+                    <div class="words">
+                        <a href="javascript:;" class="u-name">天上飞</a>
+                        <a href="javascript:;" class="n-name">李承铉</a>
+                        <span>顽皮老板喝不醉</span>
+                    </div>
+                    <!-- 进度条 -->
+                    <div class="m-pbar">
+                        <span class="f-tdn"></span>
+                    </div>
+                </div>
+                <span class="j-time"><i>00:59</i>/01:15</span>
+            </div>
+            <!-- 点赞分享 -->
+            <div class="oper">
+                <a href="javascript:;" class="icn-add"></a>
+                <a href="javascript:;" class="icn-share"></a>
+            </div>
+            <!-- 功能按钮 -->
+            <div class="crtl">
+                <a href="javascript:;" class="icn-vol"></a>
+                <a href="javascript:;" class="icn-loop"></a>
+                <a href="javascript:;" class="icn-list"><i>111</i></a>
+            </div>
+        </div>
+    </div>
+    <!-- 将ifarm自动适配高度 -->
     <script>
         var iframes = document.getElementsByTagName('iframe');
 
