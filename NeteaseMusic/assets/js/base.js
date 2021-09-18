@@ -3,7 +3,7 @@ $(function() {
     axios.interceptors.request.use(function(config) {
             // 设置全局URL
             config.url = 'http://localhost:3000' + config.url;
-            // console.log(config.url);
+            config.method = 'GET';
             return config;
         })
         // 添加响应拦截器

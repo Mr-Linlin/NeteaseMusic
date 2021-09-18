@@ -124,7 +124,13 @@ body {
     font-size: 12px;
 }
 
-.u-page .prv-page {
+.toggle-page {
+    background: rgb(238, 238, 238);
+    color: rgb(202, 202, 202);
+    cursor: not-allowed;
+}
+
+.toggle-page:hover {
     color: rgb(202, 202, 202);
 }
 
@@ -143,6 +149,7 @@ body {
     height: 31px;
     color: rgb(102, 102, 102);
     margin-right: 6px;
+    font-size: 12px;
 }
 
 .btns a:first-child {
@@ -184,19 +191,22 @@ body {
 
 .u-btn-fav {
     position: relative;
-    width: 62px;
+    width: 90px;
     background: url(../images/button2.png)no-repeat 0 -977px;
-    /* border-right: 1px solid rgb(102, 102, 102); */
+    border-right: 1px solid #ccc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-.u-btn-fav::after {
+
+/* .u-btn-fav::after {
     position: absolute;
     display: inline-block;
     content: '';
     width: 6px;
     height: 32px;
     background: url(../images/button2.png)no-repeat -244px -1020px;
-}
+} */
 
 .u-btn-fav:hover {
     background: url(../images/button2.png)no-repeat 0 -1063px;
@@ -237,17 +247,20 @@ body {
     position: relative;
     width: 62px;
     background: url(../images/button2.png)no-repeat 0 -2761px;
-    /* border-right: 1px solid rgb(102, 102, 102); */
+    border-right: 1px solid #ccc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-.u-btn-dl::after {
+
+/* .u-btn-dl::after {
     position: absolute;
     display: inline-block;
     content: '';
     width: 6px;
     height: 32px;
     background: url(../images/button2.png)no-repeat -244px -1020px;
-}
+} */
 
 .u-btn-dl:hover {
     background: url(../images/button2.png)no-repeat 0 -2805px;
@@ -394,12 +407,20 @@ body {
     flex: 1;
     margin-top: 15px;
     height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .cnt {
     height: 20px;
     width: 100%;
     margin: 0;
+}
+
+.cnt span {
+    display: inline-block;
+    font-size: 12px;
 }
 
 .cnt .s-fc1 {

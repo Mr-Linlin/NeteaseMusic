@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .pause {
+            width: 32px;
+            height: 32px;
+            background-position: -2px -167px !important;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 固定导航栏 -->
+    <div class="m-btmbar">
+        <audio src="assets/music/骁.mp3" id="audio"></audio>
+        <div class="wrap">
+            <!-- 播放暂停 -->
+            <div class="btns">
+                <a href="javascript:;" class="prv"></a>
+                <a href="javascript:;" class="ply" id="ply"></a>
+                <a href="javascript:;" class="nxt"></a>
+            </div>
+            <!-- 歌曲封面 -->
+            <div class="head">
+                <a href="javascript:;" class="msk">
+                    <img src="assets/images/m2.png" alt="">
+                </a>
+            </div>
+            <!-- 播放进度条 -->
+            <div class="play">
+                <div class="p-wrap">
+                    <div class="words">
+                        <a href="javascript:;" class="u-name">天上飞</a>
+                        <a href="javascript:;" class="n-name">李承铉</a>
+                        <span>顽皮老板喝不醉</span>
+                    </div>
+                    <!-- 进度条 -->
+                    <div class="m-pbar">
+                        <span class="f-tdn"></span>
+                        <!-- 进度控制条，跟随歌曲播放 -->
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <span class="j-time"><i>00:59</i>/01:15</span>
+            </div>
+            <!-- 点赞分享 -->
+            <div class="oper">
+                <a href="javascript:;" class="icn-add"></a>
+                <a href="javascript:;" class="icn-share"></a>
+            </div>
+            <!-- 功能按钮 -->
+            <div class="crtl">
+                <a href="javascript:;" class="icn-vol"></a>
+                <a href="javascript:;" class="icn-loop"></a>
+                <a href="javascript:;" class="icn-list"><i>111</i></a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/lib/jquery.js"></script>
+    <script>
+        $(function() {
+
+            // 设置变量来控制歌曲的播放和暂停
+            let flag = true;
+            $('#ply').on('click', function() {
+                if (flag) {
+                    $('#audio')[0].play();
+                    totleTime = $('#audio')[0].duration;
+                    timer = setInterval(animation, 10);
+                    $(this).toggleClass('pause');
+                    flag = false;
+                } else if (!flag) {
+                    $('#audio')[0].pause();
+                    $(this).toggleClass('pause');
+                    clearInterval(timer);
+                    flag = true;
+                }
+            })
+            let timer;
+            let totleTime = 0;
+
+            // 让进度条动起来
+            function animation() {
+                // 让小圆点跟着音乐播放而运动
+                let n = $('#audio')[0].currentTime / totleTime;
+                console.log(n);
+                $('.f-tdn')[0].style.marginLeft = ~~(n * $('.m-pbar')[0].offsetWidth) + 'px';
+                // 当小圆点播放时小进度条也需跟着移动
+                $('.bar')[0].style.width = ~~(n * $('.m-pbar')[0].offsetWidth) + 'px';
+            }
+        })
+    </script>
+</body>
+
+</html>

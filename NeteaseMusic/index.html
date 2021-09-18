@@ -56,7 +56,7 @@
     <!-- 主体内容 -->
     <div class="g-main">
         <!-- 嵌套页面ifarm -->
-        <iframe src="main.html" class="g-ifarm" frameborder="0" width="100%" name="fm"></iframe>
+        <iframe src="mList.html" class="g-ifarm" frameborder="0" width="100%" name="fm"></iframe>
     </div>
     <!-- 底部导航栏 -->
     <div class="g-ft">
@@ -65,11 +65,12 @@
     </div>
     <!-- 固定导航栏 -->
     <div class="m-btmbar">
+        <audio src="assets/music/骁.mp3" id="audio"></audio>
         <div class="wrap">
             <!-- 播放暂停 -->
             <div class="btns">
                 <a href="javascript:;" class="prv"></a>
-                <a href="javascript:;" class="ply"></a>
+                <a href="javascript:;" class="ply" id="ply"></a>
                 <a href="javascript:;" class="nxt"></a>
             </div>
             <!-- 歌曲封面 -->
@@ -82,13 +83,15 @@
             <div class="play">
                 <div class="p-wrap">
                     <div class="words">
-                        <a href="javascript:;" class="u-name">天上飞</a>
-                        <a href="javascript:;" class="n-name">李承铉</a>
-                        <span>顽皮老板喝不醉</span>
+                        <a href="javascript:;" class="u-name">骁</a>
+                        <a href="javascript:;" class="n-name">井迪</a>
+                        <span>井胧</span>
                     </div>
                     <!-- 进度条 -->
                     <div class="m-pbar">
-                        <span class="f-tdn"></span>
+                        <span class="f-tdn" id="tdn"></span>
+                        <!-- 进度控制条，跟随歌曲播放 -->
+                        <div class="bar"></div>
                     </div>
                 </div>
                 <span class="j-time"><i>00:59</i>/01:15</span>
@@ -106,23 +109,8 @@
             </div>
         </div>
     </div>
-    <!-- 将ifarm自动适配高度 -->
-    <script>
-        var iframes = document.getElementsByTagName('iframe');
-
-        for (var i = 0, j = iframes.length; i < j; ++i) {
-            // 放在闭包中，防止iframe触发load事件的时候下标不匹配
-            (function(_i) {
-                iframes[_i].onload = function() {
-                    this.contentWindow.onbeforeunload = function() {
-                        iframes[_i].setAttribute('height', 'auto');
-                    };
-
-                    this.setAttribute('height', this.contentWindow.document.body.scrollHeight);
-                };
-            })(i);
-        }
-    </script>
+    <script src="assets/lib/jquery.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>

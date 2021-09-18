@@ -1,9 +1,8 @@
 /* 头部模块 */
 
-
-/* body {
-    overflow: hidden;
-} */
+body {
+    overflow-y: hidden;
+}
 
 .m-top {
     display: flex;
@@ -203,9 +202,10 @@
     width: 100%;
 }
 
-.g-main::-webkit-scrollbar {
+
+/* .g-main::-webkit-scrollbar {
     display: none;
-}
+} */
 
 
 /* 底部模块 */
@@ -260,6 +260,13 @@
     width: 32px;
     height: 32px;
     background-position: -2px -206px;
+    margin: 0 8px;
+}
+
+.pause {
+    width: 32px;
+    height: 32px;
+    background-position: -2px -167px !important;
     margin: 0 8px;
 }
 
@@ -339,10 +346,22 @@
     height: 17px;
     background: url(../images/iconall.png)no-repeat -3px -253px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .f-tdn:hover {
     background: url(../images/iconall.png)no-repeat -3px -283px;
+}
+
+.bar {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: rgb(199, 12, 12);
+    border-radius: 5px;
 }
 
 .j-time {

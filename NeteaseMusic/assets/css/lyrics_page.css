@@ -3,12 +3,13 @@
     width: 100%;
     justify-content: center;
     background: rgb(245, 245, 245);
+    margin-bottom: 165px;
 }
 
 .wrap2 {
     display: flex;
     width: 982px;
-    height: 1200px;
+    /* height: 1200px; */
     background: #fff;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -357,6 +358,11 @@
     line-height: 35px;
     margin-left: 15px;
     margin-top: 5px;
+}
+
+body .m-pl-pager {
+    display: none;
+    margin: 40px 0;
 }
 
 .u-hd2 {

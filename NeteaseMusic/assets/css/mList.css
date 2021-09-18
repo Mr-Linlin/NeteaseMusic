@@ -1,5 +1,6 @@
 .g-bd {
     display: flex;
+    margin-bottom: 165px;
 }
 
 
@@ -53,7 +54,7 @@
 
 .f-cb .cnt .s-fc {
     color: #000;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .f-cb .rb .s-fc {
@@ -72,6 +73,7 @@
 
 .g-mn3 {
     flex: 1;
+    width: 740px;
 }
 
 .g-wrap {
@@ -143,6 +145,11 @@
 }
 
 
+/* .layui-table .song-list-pre {
+    width: 660px;
+} */
+
+
 /* 歌曲评论模块 */
 
 .g-wrap2 {
@@ -169,12 +176,17 @@
 
 /* 评论区域 */
 
+.g-wrap3 {
+    margin: 40px;
+}
+
 .n-cmt {
     margin-top: 40px;
 }
 
 .m-commtpt .m-pl-pager {
     margin: 40px 0;
+    display: none;
 }
 
 
@@ -217,6 +229,9 @@
     height: 50px;
     margin: 10px 0;
     /* background: palegreen; */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
 }
 
 .layui-table .rpic {
@@ -225,10 +240,14 @@
     margin-right: 10px;
 }
 
+.layui-table .rpic img {
+    width: 50px;
+}
+
 .layui-table .ply {
     display: inline-block;
     background: url(../images/table.png) no-repeat 0 -103px;
-    width: 17px;
+    width: 19px;
     height: 17px;
     cursor: pointer;
     margin-top: 17px;
@@ -241,13 +260,16 @@
 .txt {
     position: relative;
     height: 20px;
-    /* margin-left: 10px;
-    margin-top: 16px; */
     margin: 16px 10px;
+    font-size: 12px;
 }
 
 .txt a {
     display: inline-block;
+}
+
+.txt a:hover {
+    text-decoration: underline;
 }
 
 .layui-table .mv {
