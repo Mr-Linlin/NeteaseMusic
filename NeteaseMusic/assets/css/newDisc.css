@@ -1,7 +1,13 @@
-.m-cvrlst {
+.m-cvrlst,
+.m-cvrlst-alb2 {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin: 30px 0;
+}
+
+.m-cvrlst {
+    height: 410px;
+    overflow: hidden;
 }
 
 .m-cvrlst li {
@@ -15,10 +21,28 @@
     margin-left: 0;
 }
 
+.m-cvrlst-alb2 li {
+    width: 150px;
+    height: 170px;
+    margin-left: 35px;
+    margin-bottom: 35px;
+}
+
+.m-cvrlst-alb2 .m-pl-pager {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.m-cvrlst-alb2 li:nth-child(5n-4) {
+    margin-left: 0;
+}
+
 .d-cover {
     position: relative;
     width: 130px;
     height: 130px;
+    border: 1px solid #ccc;
 }
 
 .msk {
@@ -29,6 +53,12 @@
     width: 21px;
     height: 121px;
     background: url(../images/coverall.png)no-repeat -129px -850px;
+}
+
+.f-thide {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
 }
 
 .f-thide a {

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -15,11 +16,10 @@
         <!-- 轮播图区域 -->
         <div class="wrap">
             <div class="ban-img">
-                <a href="javascript:;">
-                    <ul class="m-banner">
-                        <li><img src="assets/images/banner.jpg" alt=""></li>
-                    </ul>
-                </a>
+                <div class="layui-carousel" id="banner">
+                    <div carousel-item id="g-focus">
+                    </div>
+                </div>
             </div>
             <div class="download-pr">
                 <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
@@ -37,127 +37,23 @@
                     <div class="n-hot">
                         <a href="javascript:;" class="rmd-title">热门推荐</a>
                         <div class="tab">
-                            <a href="javascript:;" class="s-fs">古风</a>
-                            <a href="javascript:;" class="s-fs">华语</a>
-                            <a href="javascript:;" class="s-fs">民谣</a>
-                            <a href="javascript:;" class="s-fs">流行</a>
-                            <a href="javascript:;" class="s-fs">摇滚</a>
+                            <a href="javascript:;" class="s-fs" data-cat="古风">古风</a>
+                            <a href="javascript:;" class="s-fs" data-cat="华语">华语</a>
+                            <a href="javascript:;" class="s-fs" data-cat="民谣">民谣</a>
+                            <a href="javascript:;" class="s-fs" data-cat="流行">流行</a>
+                            <a href="javascript:;" class="s-fs" data-cat="摇滚">摇滚</a>
                         </div>
-                        <span class="more"><a href="javascript:;">更多</a></span>
+                        <span class="more"><a href="playList.html" target="fm">更多</a></span>
                     </div>
                     <!--热门推荐歌单 -->
                     <ul class="m-cvrlst">
-                        <li>
-                            <div class="u-cover">
-                                <img src="assets/images/cover1.jpg" alt="">
-                            </div>
-                            <p class="dec">
-                                <a href="javascript:;">纯音乐｜生活中的一味治愈良药</a>
-                            </p>
-                            <div class="u-bottom">
-                                <a href="javascript:;" class="icon-play"></a>
-                                <span class="icon-headset">111</span>
-                                <span class="nb">11万</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="u-cover">
-                                <img src="assets/images/cover1.jpg" alt="">
-                            </div>
-                            <p class="dec">
-                                <a href="javascript:;">纯音乐｜生活中的一味治愈良药</a>
-                            </p>
-                            <div class="u-bottom">
-                                <a href="javascript:;" class="icon-play"></a>
-                                <span class="icon-headset">111</span>
-                                <span class="nb">11万</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="u-cover">
-                                <img src="assets/images/cover1.jpg" alt="">
-                            </div>
-                            <p class="dec">
-                                <a href="javascript:;">纯音乐｜生活中的一味治愈良药</a>
-                            </p>
-                            <div class="u-bottom">
-                                <a href="javascript:;" class="icon-play"></a>
-                                <span class="icon-headset">111</span>
-                                <span class="nb">11万</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="u-cover">
-                                <img src="assets/images/cover1.jpg" alt="">
-                            </div>
-                            <p class="dec">
-                                <a href="javascript:;">纯音乐｜生活中的一味治愈良药</a>
-                            </p>
-                            <div class="u-bottom">
-                                <a href="javascript:;" class="icon-play"></a>
-                                <span class="icon-headset">111</span>
-                                <span class="nb">11万</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="u-cover">
-                                <img src="assets/images/cover1.jpg" alt="">
-                            </div>
-                            <p class="dec">
-                                <a href="javascript:;">纯音乐｜生活中的一味治愈良药</a>
-                            </p>
-                            <div class="u-bottom">
-                                <a href="javascript:;" class="icon-play"></a>
-                                <span class="icon-headset">111</span>
-                                <span class="nb">11万</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="u-cover">
-                                <img src="assets/images/cover1.jpg" alt="">
-                            </div>
-                            <p class="dec">
-                                <a href="javascript:;">纯音乐｜生活中的一味治愈良药</a>
-                            </p>
-                            <div class="u-bottom">
-                                <a href="javascript:;" class="icon-play"></a>
-                                <span class="icon-headset">111</span>
-                                <span class="nb">11万</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="u-cover">
-                                <img src="assets/images/cover1.jpg" alt="">
-                            </div>
-                            <p class="dec">
-                                <a href="javascript:;">纯音乐｜生活中的一味治愈良药</a>
-                            </p>
-                            <div class="u-bottom">
-                                <a href="javascript:;" class="icon-play"></a>
-                                <span class="icon-headset">111</span>
-                                <span class="nb">11万</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="u-cover">
-                                <img src="assets/images/cover1.jpg" alt="">
-                            </div>
-                            <p class="dec">
-                                <a href="javascript:;">纯音乐｜生活中的一味治愈良药</a>
-                            </p>
-                            <div class="u-bottom">
-                                <a href="javascript:;" class="icon-play"></a>
-                                <span class="icon-headset">111</span>
-                                <span class="nb">11万</span>
-                            </div>
-                        </li>
                     </ul>
 
                     <!-- 新碟上架 -->
                     <div class="n-new">
                         <div class="n-hot">
                             <a href="javascript:;" class="rmd-title">新碟上架</a>
-                            <span class="more"><a href="javascript:;">更多</a></span>
+                            <span class="more"><a href="newDisc.html" target="fm">更多</a></span>
                         </div>
                         <div class="n-disk">
                             <div class="inner">
@@ -165,66 +61,6 @@
                                 <a href="javascript:;" class="click-next"></a>
                                 <div class="roll">
                                     <ul class="roll-flag">
-                                        <li>
-                                            <div class="d-cover">
-                                                <img src="assets/images/disk.jpg" alt="">
-                                                <a href="javascript:;" class="msk"></a>
-                                            </div>
-                                            <p class="f-thide">
-                                                <a href="javascript:;">幸存者的负罪感</a>
-                                            </p>
-                                            <p class="f-thide">
-                                                <a href="javascript:;" class="s-fs3">张杰</a>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <div class="d-cover">
-                                                <img src="assets/images/disk.jpg" alt="">
-                                                <a href="javascript:;" class="msk"></a>
-                                            </div>
-                                            <p class="f-thide">
-                                                <a href="javascript:;">幸存者的负罪感</a>
-                                            </p>
-                                            <p class="f-thide">
-                                                <a href="javascript:;" class="s-fs3">张杰</a>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <div class="d-cover">
-                                                <img src="assets/images/disk.jpg" alt="">
-                                                <a href="javascript:;" class="msk"></a>
-                                            </div>
-                                            <p class="f-thide">
-                                                <a href="javascript:;">幸存者的负罪感</a>
-                                            </p>
-                                            <p class="f-thide">
-                                                <a href="javascript:;" class="s-fs3">张杰</a>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <div class="d-cover">
-                                                <img src="assets/images/disk.jpg" alt="">
-                                                <a href="javascript:;" class="msk"></a>
-                                            </div>
-                                            <p class="f-thide">
-                                                <a href="javascript:;">幸存者的负罪感</a>
-                                            </p>
-                                            <p class="f-thide">
-                                                <a href="javascript:;" class="s-fs3">张杰</a>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <div class="d-cover">
-                                                <img src="assets/images/disk.jpg" alt="">
-                                                <a href="javascript:;" class="msk"></a>
-                                            </div>
-                                            <p class="f-thide">
-                                                <a href="javascript:;">幸存者的负罪感</a>
-                                            </p>
-                                            <p class="f-thide">
-                                                <a href="javascript:;" class="s-fs3">张杰</a>
-                                            </p>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -235,7 +71,7 @@
                     <div class="n-bill">
                         <div class="n-hot">
                             <a href="javascript:;" class="rmd-title">榜单</a>
-                            <span class="more"><a href="javascript:;">更多</a></span>
+                            <span class="more"><a href="main.html" target="fm">更多</a></span>
                         </div>
                         <div class="n-bilst">
                             <dl class="blk">
@@ -537,69 +373,68 @@
                                 <p class="s-fg6">心里学家</p>
                             </div>
                         </li>
-                        <li>
-                            <a href="javascript:;" class="dj-cver">
-                                <div class="itm-head">
-                                    <img src="assets/images/fio.jpg" alt="">
-                                </div>
-                            </a>
-                                    <div class="info">
-                                        <p>
-                                            <a href="javascript:;" class="f-fg4">王三博</span>
-                                </p>
-                                <p class="s-fg6">心里学家</p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="dj-cver">
-                                <div class="itm-head">
-                                    <img src="assets/images/fio.jpg" alt="">
-                                </div>
-                            </a>
-                                            <div class="info">
-                                                <p>
-                                                    <a href="javascript:;" class="f-fg4">王三博</span>
-                                </p>
-                                <p class="s-fg6">心里学家</p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="dj-cver">
-                                <div class="itm-head">
-                                    <img src="assets/images/fio.jpg" alt="">
-                                </div>
-                            </a>
-                                                    <div class="info">
-                                                        <p>
-                                                            <a href="javascript:;" class="f-fg4">王三博</span>
-                                </p>
-                                <p class="s-fg6">心里学家</p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="dj-cver">
-                                <div class="itm-head">
-                                    <img src="assets/images/fio.jpg" alt="">
-                                </div>
-                            </a>
-                                                            <div class="info">
-                                                                <p>
-                                                                    <a href="javascript:;" class="f-fg4">王三博</span>
-                                </p>
-                                <p class="s-fg6">心里学家</p>
-                            </div>
-                        </li>
                     </ul>
-                    </div>
                 </div>
-
             </div>
+
         </div>
     </div>
-    <!-- <script src="assets/lib/jquery.js"></script>
-    <script src="assets/lib/axios.js"></script> -->
-    <!-- <script src="assets/js/base.js"></script> -->
-    <!-- <script src="assets/js/main.js"></script> -->
+    </div>
+
+    <!-- 加载轮播图数据 -->
+    <script type="text/html" id="g-banner">
+        {{each banners}}
+            <div><img src="{{$value.pic}}"></div>
+        {{/each}}
+    </script>
+
+    <script src="assets/lib/jquery.js"></script>
+    <script src="assets/lib/layui/layui.all.js"></script>
+    <script src="assets/lib/template-web.js"></script>
+    <script src="assets/lib/axios.js"></script>
+    <script src="assets/js/base.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
+<!-- 渲染推荐歌单 -->
+<script type="text/html" id="playlist-hot">
+    <ul class="m-cvrlst">
+        {{each playlists}}
+        <li>
+            <div class="u-cover">
+                <img src="{{$value.coverImgUrl}}" alt="">
+            </div>
+            <p class="dec">
+                <a href="javascript:;">{{$value.name}}</a>
+                                </p>
+                                <p class="dec">
+                                    <a href="javascript:;" class="user-playlist">{{$value.creator.nickname}}</a>
+                                </p>
+                                <div class="u-bottom">
+                                    <a href="javascript:;" class="icon-play"></a>
+                                    <span class="icon-headset"></span>
+                                    <span class="nb">{{$value.playCount | getInt}}万</span>
+                                </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    </script>
+
+                    <!-- 渲染热门新碟 -->
+                    <script type="text/html" id="hotDisc">
+                        {{each albums}}
+                        <li>
+                            <div class="d-cover">
+                                <img src="{{$value.picUrl}}" alt="">
+                                <a href="javascript:;" class="msk"></a>
+                            </div>
+                            <p class="f-thide">
+                                <a href="javascript:;">{{$value.name}}</a>
+                            </p>
+                            <p class="f-thide">
+                                <a href="javascript:;" class="s-fs3">{{$value.artist.name}}</a>
+                            </p>
+                        </li>
+                        {{/each}}
+                    </script>
 
 </html>

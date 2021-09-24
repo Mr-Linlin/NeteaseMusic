@@ -9,6 +9,7 @@ body {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     background: #fff;
+    margin-bottom: 165px;
 }
 
 .g-wrap {
@@ -122,10 +123,27 @@ body {
     margin-bottom: 10px;
 }
 
+.dec {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
 .dec a {
     display: inline-block;
     padding: 0;
     font-size: 14px;
+}
+
+.dec .user-playlist {
+    font-size: 12px;
+    color: rgb(114, 105, 105);
+    font-weight: 400;
+}
+
+.user-playlist::before {
+    content: 'by';
+    margin-right: 10px;
 }
 
 .dec a:hover {
@@ -170,45 +188,4 @@ body {
     color: rgb(188, 188, 188);
     font-size: 12px;
     margin-left: 30px;
-}
-
-
-/* 分页功能 */
-
-.m-pl-pager {
-    text-align: center;
-    /* background: pink; */
-    height: 26px;
-}
-
-.u-page .btn {
-    display: inline-block;
-    width: 63px;
-    height: 26px;
-    background-image: url(../images/index.png);
-    background-repeat: no-repeat;
-    background-position-y: -130px;
-    line-height: 26px;
-    border: 0;
-}
-
-.u-page a {
-    display: inline-block;
-    width: 26px;
-    height: 26px;
-    line-height: 26px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 5px;
-    font-size: 12px;
-}
-
-.u-page .prv-page {
-    color: rgb(202, 202, 202);
-}
-
-.frist-btn {
-    background: rgb(194, 17, 16);
-    color: #fff;
 }

@@ -82,23 +82,23 @@ let q = {
         id: 0,
         limit: 20,
         offset: 1,
-        pageNum: 1
+        pageNum: 0
     }
     // 使用分页模块
 function renderPage(total) {
 
     $('.m-pl-pager').show();
     let cunt = Math.ceil(total / q.limit); //总页数
-    $('#cunt').html('第' + q.pageNum + '/' + cunt + '页');
+    $('#cunt').html('第' + (q.pageNum + 1) + '/' + cunt + '页');
 
-    if (q.pageNum == 1) {
+    if (q.pageNum <= 0) {
         $('.prv-page').addClass('toggle-page');
-    } else if (q.pageNum == cunt) {
+    } else if (q.pageNum >= cunt - 1) {
         $('.nxt-page').addClass('toggle-page');
     }
     // 点击下一页
     $('.nxt-page').on('click', function() {
-            if (q.pageNum >= cunt) {
+            if (q.pageNum >= cunt - 1) {
                 $('.nxt-page').addClass('toggle-page');
                 return;
             }
@@ -108,7 +108,7 @@ function renderPage(total) {
         })
         // 点击上一页
     $('.prv-page').on('click', function() {
-        if (q.pageNum <= 1) {
+        if (q.pageNum <= 0) {
             $('.prv-page').addClass('toggle-page');
             return;
         }
